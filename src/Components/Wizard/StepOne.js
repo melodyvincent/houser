@@ -28,21 +28,21 @@ import { Connect } from 'react-redux';
     }
 }
 
-function mapStateToProps(state){
-    const { name, address, city, propertystate, zipcode} = state
-    return {
-        name,
-        address, 
-        city, 
-        state,
-        zipcode
-    }
-}
+// function mapStateToProps(state){
+//     const { name, address, city, propertystate, zipcode} = state
+//     return {
+//         name,
+//         address, 
+//         city, 
+//         state,
+//         zipcode
+//     }
+// }
 
 
-export default connect(mapStateToProps, {updateName, updateAddress, updateCity, updatePropertyState, updateZipcode})(StepOne);
+// export default connect(mapStateToProps, {updateName, updateAddress, updateCity, updatePropertyState, updateZipcode})(StepOne);
 
-// export default StepOne;
+export default StepOne;
 
 
 

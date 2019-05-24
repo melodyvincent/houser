@@ -32,7 +32,21 @@ class StepThree extends Component {
         })
 
         }
-    
+
+
+
+        
+        handleUpdateMortgage(e) {
+            this.setState({mortgage: e.target.value});
+        }
+        handleUpdateRent(e) {
+            this.setState({rent: e.target.value});
+        }
+
+       handleOnClick() {
+           this.setState({redirect: true});
+       }
+
 
     render() {
         const {updateMortgage, updateRent} = this.props
@@ -43,27 +57,32 @@ class StepThree extends Component {
     
                 <br></br>
 
+                {/* <button onClick={() => this.addNewProperty()}>Complete</button>
+                <button>Cancel</button> */}
+
                 <button onClick={() => this.addNewProperty()}><Link to='/'>Complete</Link></button>
+                <button><Link to='/'>Cancel</Link></button>
+
             </div>    
         )
     }
 }
 
-    function mapStateToProps(state){
-    const { name, address, city, propertystate, zipcode} = state
-    return {
-        name,
-        address, 
-        city, 
-        state,
-        zipcode,
-        img,
-        mortgage,
-        rent
-    }
-}
+//     function mapStateToProps(state){
+//     const { name, address, city, propertystate, zipcode} = state
+//     return {
+//         name,
+//         address, 
+//         city, 
+//         state,
+//         zipcode,
+//         img,
+//         mortgage,
+//         rent
+//     }
+// }
 
 
-export default connect(mapStateToProps, {updateMortgage, updateRent}) (StepThree);
+// export default connect(mapStateToProps, {updateMortgage, updateRent}) (StepThree);
 
-// export default StepThree;
+export default StepThree;
