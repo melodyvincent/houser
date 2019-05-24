@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {HashRouter} from 'react-router-dom';
-import Router from '../src/routes';
+import routes from '../src/routes';
 import Header from './Components/Header/header';
+import store from './ducks/reducer';
 
 
 

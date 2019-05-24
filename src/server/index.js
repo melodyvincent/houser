@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
-const ctrl = require('./controller');
+const controller = require('./controller');
 const massive = require('massive');
 
 const app = express();
@@ -11,7 +11,14 @@ let { SERVER_PORT, CONNECTION_STRING} = process.env
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
-});
+})
+    .catch(err => {
+        console.log(err);
+})
+
+app.get('/api/houselist', controller.getHouseList);
+app.post('api/property', controller.addNewProperty);
+app.delete('/api/property/:id', controller.deleteProperty);
 
 
 
