@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { thisTypeAnnotation } from '@babel/types';
+import { Link } from 'react-router-dom';
+import{ connect } from 'react-redux';
+import {updateMortgage, updateRent} from '../../ducks/reducer';
 import axios from 'axios';
 
 
