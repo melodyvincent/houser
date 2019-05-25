@@ -6,7 +6,6 @@ import StepThree from './StepThree';
 import store from '../../ducks/store';
 
 
-
  class Wizard extends Component {
 
 

@@ -5,7 +5,6 @@ import { Connect } from 'react-redux';
 
  class StepOne extends Component {
 
-    
     componentDidMount(){
 
     }
@@ -28,6 +27,8 @@ import { Connect } from 'react-redux';
     }
 }
 
+export default StepOne;
+
 // function mapStateToProps(state){
 //     const { name, address, city, propertystate, zipcode} = state
 //     return {
@@ -42,7 +43,7 @@ import { Connect } from 'react-redux';
 
 // export default connect(mapStateToProps, {updateName, updateAddress, updateCity, updatePropertyState, updateZipcode})(StepOne);
 
-export default StepOne;
+
 
 
 

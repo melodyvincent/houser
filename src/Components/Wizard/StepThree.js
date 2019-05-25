@@ -35,9 +35,6 @@ class StepThree extends Component {
 
         }
 
-
-
-        
         handleUpdateMortgage(e) {
             this.setState({mortgage: e.target.value});
         }
@@ -70,6 +67,8 @@ class StepThree extends Component {
     }
 }
 
+export default StepThree;
+
 //     function mapStateToProps(state){
 //     const { name, address, city, propertystate, zipcode} = state
 //     return {
@@ -87,4 +86,3 @@ class StepThree extends Component {
 
 // export default connect(mapStateToProps, {updateMortgage, updateRent}) (StepThree);
 
-export default StepThree;
